@@ -6,7 +6,7 @@ class CalculatorControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "post to index returns results" do
+  test "post to #calculate returns results" do
     post :calculate, params: { equation: '5*3+1+6/85+9*100' }
     assert_response :success
 
