@@ -5,7 +5,14 @@ class StringCalculatorService
 
   def call
     #eval @string <-- Fast, but very dangerous
-    sprintf("%0.02f", calculate(@string))
+    trim_decimal(calculate(@string))
+  end
+
+  private
+
+  def trim_decimal(number)
+    integer, float = number.to_i, number.to_f
+    integer == float ? integer : float.to_d.round(2, :truncate).to_f
   end
 
   def calculate(string)
