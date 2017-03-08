@@ -1,24 +1,19 @@
-# README
+Create a rails app that has one root page that is a calculator.  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It implements these operators (say +, -, /,*) _on any number of integer arguments._  
+_The page has only a text box and a submit button.  _
+_The requested operation and its result should be displayed below the text box after clicking the calculate button. _
+ 
+Input example:
+5*3+1+6/2+9*100
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Expected output:
+5*3+1+6/2+9*100
+919
+ 
+Input example:
+5*3+1+6/85+9*100
+ 
+Expected output:
+5*3+1+6/85+9*100
+916.07
