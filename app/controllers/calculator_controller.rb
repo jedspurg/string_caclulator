@@ -4,6 +4,6 @@ class CalculatorController < ApplicationController
 
   def calculate
     @result = StringCalculatorService.new(params[:equation]).call
-    render json: { results: "#{params[:equation]} = #{@result}" }.to_json
+    render json: { equation: params[:equation], result: @result }.to_json
   end
 end
