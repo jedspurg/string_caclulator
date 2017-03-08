@@ -1,0 +1,5 @@
+<h1>Calculator</h1>
+<%= form_tag('/calculator', id: :calculator, remote: true) %>
+  <%= text_field_tag :equation %>
+  <%= submit_tag :calculate %>
+<h3 id="results" style="margin-top:50px"></h3>
